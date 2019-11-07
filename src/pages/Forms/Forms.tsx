@@ -1,8 +1,10 @@
 import React, { FC, useState } from "react";
 
-import { Box, Card, CardContent, styled, Tab, Tabs, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, Tab, Tabs, Typography } from "@material-ui/core";
 
 import PageHeaderRow from "../../components/PageHeaderRow";
+import Reducer from "./Reducer";
+import Simple from "./Simple";
 
 const Forms: FC = () => {
   const [tab, setTab] = useState<number>(0);
@@ -14,9 +16,13 @@ const Forms: FC = () => {
           <Typography variant="h4">Forms Demo</Typography>
           <Tabs value={tab} onChange={(_, value) => setTab(value)}>
             <Tab label="Simple" value={0} />
+            <Tab label="Reducer + Memo" value={1} />
           </Tabs>
         </PageHeaderRow>
-        <CardContent></CardContent>
+        <CardContent>
+          {tab === 0 && <Simple />}
+          {tab === 1 && <Reducer />}
+        </CardContent>
       </Card>
     </Box>
   );
