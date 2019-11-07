@@ -7,10 +7,7 @@ import Reducer from "./Reducer";
 import ReducerPlusMemo from "./ReducerPlusMemo";
 import Simple from "./Simple";
 
-interface Props {}
-
-const ListState: FC<Props> = props => {
-  const {} = props;
+const ListState: FC = () => {
   const [tab, setTab] = useState<number>(0);
 
   return (

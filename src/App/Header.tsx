@@ -4,11 +4,7 @@ import { AppBar, Box, styled, Toolbar, Typography } from "@material-ui/core";
 
 import InternalLink from "../components/InternalLink";
 
-interface Props {}
-
-const Header: FC<Props> = props => {
-  const {} = props;
-
+const Header: FC = () => {
   return (
     <AppBar position="sticky">
       <StyledToolbar color="primary">
