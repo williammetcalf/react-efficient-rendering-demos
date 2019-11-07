@@ -8,7 +8,7 @@ interface Props {
   onClick: (idx: number) => any;
 }
 
-const ToggleItem: FC<Props> = props => {
+export const ToggleItem: FC<Props> = props => {
   const { toggled, onClick, index } = props;
 
   console.log("render");

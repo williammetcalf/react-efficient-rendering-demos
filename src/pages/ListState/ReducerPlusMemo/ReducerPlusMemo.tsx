@@ -2,13 +2,10 @@ import React, { FC, useReducer } from "react";
 
 import { Box } from "@material-ui/core";
 
-import { ToggleItem } from "./ToggleItem";
+import { reducerFn } from "../Reducer/Reducer";
+import ToggleItem from "../Reducer/ToggleItem";
 
-export const reducerFn = (state: boolean[], toggleIndex: number) => {
-  return state.map((val, index) => (index === toggleIndex ? !val : val));
-};
-
-const Reducer: FC = () => {
+const ReducerPlusMemo: FC = () => {
   const [state, dispatch] = useReducer(reducerFn, new Array(200).fill(false));
 
   return (
@@ -20,4 +17,4 @@ const Reducer: FC = () => {
   );
 };
 
-export default Reducer;
+export default ReducerPlusMemo;
