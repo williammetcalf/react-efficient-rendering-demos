@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Box, Container, styled } from "@material-ui/core";
 
+import Forms from "../pages/Forms";
 import ListState from "../pages/ListState";
 import Header from "./Header";
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <StyledContainer maxWidth="lg">
         <Switch>
           <Route exact path="/list-state" component={ListState} />
+          <Route exact path="/forms" component={Forms} />
         </Switch>
       </StyledContainer>
     </BrowserRouter>
