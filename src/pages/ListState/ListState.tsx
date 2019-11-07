@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 
 import { Box, Card, CardContent, styled, Tab, Tabs, Typography } from "@material-ui/core";
 
+import Reducer from "./Reducer";
 import Simple from "./Simple";
 
 interface Props {}
@@ -21,6 +22,7 @@ const ListState: FC<Props> = props => {
           </Tabs>
         </HeaderRow>
         <CardContent>{tab === 0 && <Simple />}</CardContent>
+        <CardContent>{tab === 1 && <Reducer />}</CardContent>
       </Card>
     </Box>
   );
