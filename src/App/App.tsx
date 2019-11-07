@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import { Container, styled } from "@material-ui/core";
 
@@ -15,6 +15,7 @@ const App: React.FC = () => {
         <Switch>
           <Route exact path="/list-state" component={ListState} />
           <Route exact path="/forms" component={Forms} />
+          <Redirect to="/forms" />
         </Switch>
       </StyledContainer>
     </BrowserRouter>

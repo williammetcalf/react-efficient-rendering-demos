@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { Box, styled } from "@material-ui/core";
 
 import FieldGroupOne from "./FieldGroupOne";
+import FieldGroupTwo from "./FieldGroupTwo";
 import SubmitButton from "./SubmitButton";
 
 const initialValue = {
@@ -16,7 +17,8 @@ const initialValue = {
   field7: "",
   field8: "",
   field9: "",
-  field10: ""
+  field10: "",
+  arrayField: ["first", "second", "third"]
 };
 
 const AdvancedFormik: FC = () => {
@@ -35,6 +37,8 @@ const AdvancedFormik: FC = () => {
           <SubmitButton />
         </HeaderRow>
         <FieldGroupOne />
+        <hr />
+        <FieldGroupTwo />
       </Form>
     </Formik>
   );

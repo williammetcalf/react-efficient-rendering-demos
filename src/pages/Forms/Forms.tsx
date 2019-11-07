@@ -9,7 +9,7 @@ import Simple from "./Simple";
 import ValidateTopDown from "./ValidateTopDown";
 
 const Forms: FC = () => {
-  const [tab, setTab] = useState<number>(3);
+  const [tab, setTab] = useState<number>(0);
 
   return (
     <Box>

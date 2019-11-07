@@ -9,6 +9,7 @@ const Field: FC<FastFieldProps> = props => {
   const { field, form } = props;
   const { name } = field;
   const displayError = !!form.touched[name] && !!form.errors[name];
+  console.log("render");
 
   return (
     <StyledTextField
